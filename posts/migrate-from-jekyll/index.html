@@ -231,7 +231,7 @@ With Jekyll, something that looked like</p>
 <h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
 <p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
 <h3 id="implementation">Implementation</h3>
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
+<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that sekercis exactly the same thing.</p>
 <p>Jekyll&rsquo;s plugin:</p>
 <pre><code>module Jekyll
   class ImageTag &lt; Liquid::Tag
@@ -442,7 +442,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
   <footer class="footer">
     <section class="container">
       
-        <p>Enter a text here.</p>
+        <p>Salih Selim Sekerci's About..</p>
       
       
         ©
@@ -454,7 +454,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
       
       
          · 
-        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        Powered by <a>Salih Selim Sekerci</a>
       
       
         

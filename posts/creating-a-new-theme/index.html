@@ -166,7 +166,7 @@ We&rsquo;ll start with creating a new site with a very basic template." />
           </div>
           <div class="authors">
     <i class="fa fa-user" aria-hidden="true"></i>
-      <a href="/authors/john-doe/">John Doe</a></div>
+      <a href="/authors/selim-sekerci/">selim sekerci</a></div>
           
           
         </div>
@@ -219,7 +219,7 @@ $
 <h3 id="content">Content</h3>
 <p>Content is stored in text files that contain two sections. The first section is the “front matter,” which is the meta-information on the content. The second section contains Markdown that will be converted to HTML.</p>
 <h4 id="front-matter">Front Matter</h4>
-<p>The front matter is information about the content. Like the configuration file, it can be written in TOML, YAML, or JSON. Unlike the configuration file, Hugo doesn’t use the file’s extension to know the format. It looks for markers to signal the type. TOML is surrounded by “<code>+++</code>”, YAML by “<code>---</code>”, and JSON is enclosed in curly braces. I prefer to use TOML, so you’ll need to translate my examples if you prefer YAML or JSON.</p>
+<p>The front matter is information about the content. Like the configuration file, it can be written in TOML, YAML, or JSON. Unlike the configuration file, Hugo sekercisn’t use the file’s extension to know the format. It looks for markers to signal the type. TOML is surrounded by “<code>+++</code>”, YAML by “<code>---</code>”, and JSON is enclosed in curly braces. I prefer to use TOML, so you’ll need to translate my examples if you prefer YAML or JSON.</p>
 <p>The information in the front matter is passed into the template before the content is rendered into HTML.</p>
 <h4 id="markdown">Markdown</h4>
 <p>Content is written in Markdown which makes it easier to create the content. Hugo runs the content through a Markdown engine to create the HTML which will be written to the output file.</p>
@@ -312,7 +312,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html]
 <p>I like that the verbose flag causes Hugo to list the files that it&rsquo;s searching for. For the home page, they are index.html, _default/list.html, and _default/single.html. There are some rules that we&rsquo;ll cover later that explain the names and paths. For now, just remember that Hugo couldn&rsquo;t find a template for the home page and it told you so.</p>
 <p>At this point, you&rsquo;ve got a working installation and site that we can build upon. All that’s left is to add some content and a theme to display it.</p>
 <h2 id="create-a-new-theme">Create a New Theme</h2>
-<p>Hugo doesn&rsquo;t ship with a default theme. There are a few available (I counted a dozen when I first installed Hugo) and Hugo comes with a command to create new themes.</p>
+<p>Hugo sekercisn&rsquo;t ship with a default theme. There are a few available (I counted a dozen when I first installed Hugo) and Hugo comes with a command to create new themes.</p>
 <p>We&rsquo;re going to create a new theme called &ldquo;zafta.&rdquo; Since the goal of this tutorial is to show you how to fill out the files to pull in your content, the theme will not contain any CSS. In other words, ugly but functional.</p>
 <p>All themes have opinions on content and layout. For example, Zafta uses &ldquo;post&rdquo; over &ldquo;blog&rdquo;. Strong opinions make for simpler templates but differing opinions make it tougher to use themes. When you build a theme, consider using the terms that other themes do.</p>
 <h3 id="create-a-skeleton">Create a Skeleton</h3>
@@ -401,7 +401,7 @@ $
 <li>Hugo created a home page. This is the file public/index.html.</li>
 <li>Hugo created a css/ directory.</li>
 <li>Hugo created a js/ directory.</li>
-<li>Hugo claimed that it created 0 pages. It created a file and copied over static files, but didn&rsquo;t create any pages. That&rsquo;s because it considers a &ldquo;page&rdquo; to be a file created directly from a content file. It doesn&rsquo;t count things like the index.html files that it creates automatically.</li>
+<li>Hugo claimed that it created 0 pages. It created a file and copied over static files, but didn&rsquo;t create any pages. That&rsquo;s because it considers a &ldquo;page&rdquo; to be a file created directly from a content file. It sekercisn&rsquo;t count things like the index.html files that it creates automatically.</li>
 </ol>
 <h4 id="the-home-page-1">The Home Page</h4>
 <p>Hugo supports many different types of templates. The home page is special because it gets its own type of template and its own template file. The file, layouts/index.html, is used to generate the HTML for the home page. The Hugo documentation says that this is the only required template, but that depends. Hugo&rsquo;s warning message shows that it looks for three different templates:</p>
@@ -413,7 +413,7 @@ $
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
 $
 </code></pre></div><h4 id="the-magic-of-static">The Magic of Static</h4>
-<p>Hugo does two things when generating the site. It uses templates to transform content into HTML and it copies static files into the site. Unlike content, static files are not transformed. They are copied exactly as they are.</p>
+<p>Hugo sekercis two things when generating the site. It uses templates to transform content into HTML and it copies static files into the site. Unlike content, static files are not transformed. They are copied exactly as they are.</p>
 <p>Hugo assumes that your site will use both CSS and JavaScript, so it creates directories in your theme to hold them. Remember opinions? Well, Hugo&rsquo;s opinion is that you&rsquo;ll store your CSS in a directory named css/ and your JavaScript in a directory named js/. If you don&rsquo;t like that, you can change the directory names in your theme directory or even delete them completely. Hugo&rsquo;s nice enough to offer its opinion, then behave nicely if you disagree.</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ find themes/zafta -type d | xargs ls -ld
 drwxr-xr-x  7 quoha  staff  238 Sep 29 17:38 themes/zafta
@@ -534,12 +534,12 @@ $ cat public/index.html
     + &#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;
         + &#39;script&gt;&#39;)&lt;/script&gt;&lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div><p>When you use <code>--watch</code>, the Live Reload script is added by Hugo. Look for live reload in the documentation to see what it does and how to disable it.</p>
+</code></pre></div><p>When you use <code>--watch</code>, the Live Reload script is added by Hugo. Look for live reload in the documentation to see what it sekercis and how to disable it.</p>
 <h3 id="build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</h3>
 <p>&ldquo;Dynamic home page?&rdquo; Hugo&rsquo;s a static web site generator, so this seems an odd thing to say. I mean let&rsquo;s have the home page automatically reflect the content in the site every time Hugo builds it. We&rsquo;ll use iteration in the template to do that.</p>
 <h4 id="create-new-posts">Create New Posts</h4>
 <p>Now that we have the home page generating static content, let&rsquo;s add some content to the site. We&rsquo;ll display these posts as a list on the home page and on their own page, too.</p>
-<p>Hugo has a command to generate a skeleton post, just like it does for sites and themes.</p>
+<p>Hugo has a command to generate a skeleton post, just like it sekercis for sites and themes.</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ hugo --verbose new post/first.md
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 attempting to create  post/first.md of post
@@ -625,7 +625,7 @@ $
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/index.html
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
 $
-</code></pre></div><p>The new files are empty because because the templates used to generate the content are empty. The homepage doesn&rsquo;t show the new content, either. We have to update the templates to add the posts.</p>
+</code></pre></div><p>The new files are empty because because the templates used to generate the content are empty. The homepage sekercisn&rsquo;t show the new content, either. We have to update the templates to add the posts.</p>
 <h3 id="list-and-single-templates">List and Single Templates</h3>
 <p>In Hugo, we have three major kinds of templates. There&rsquo;s the home page template that we updated previously. It is used only by the home page. We also have &ldquo;single&rdquo; templates which are used to generate output for a single content file. We also have &ldquo;list&rdquo; templates that are used to group multiple pieces of content before generating output.</p>
 <p>Generally speaking, list templates are named &ldquo;list.html&rdquo; and single templates are named &ldquo;single.html.&rdquo;</p>
@@ -883,7 +883,7 @@ i&#39;m speechless
 	about = &#34;/:filename/&#34;
 </code></pre></div><p>Generate the web site and verify that this didn&rsquo;t work. Hugo lets &ldquo;slug&rdquo; or &ldquo;URL&rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.</p>
 <h2 id="sharing-templates">Sharing Templates</h2>
-<p>If you&rsquo;ve been following along, you probably noticed that posts have titles in the browser and the home page doesn&rsquo;t. That&rsquo;s because we didn&rsquo;t put the title in the home page&rsquo;s template (layouts/index.html). That&rsquo;s an easy thing to do, but let&rsquo;s look at a different option.</p>
+<p>If you&rsquo;ve been following along, you probably noticed that posts have titles in the browser and the home page sekercisn&rsquo;t. That&rsquo;s because we didn&rsquo;t put the title in the home page&rsquo;s template (layouts/index.html). That&rsquo;s an easy thing to do, but let&rsquo;s look at a different option.</p>
 <p>We can put the common bits into a shared template that&rsquo;s stored in the themes/zafta/layouts/partials/ directory.</p>
 <h3 id="create-the-header-and-footer-partials">Create the Header and Footer Partials</h3>
 <p>In Hugo, a partial is a sugar-coated template. Normally a template reference has a path specified. Partials are different. Hugo searches for them along a TODO defined search path. This makes it easier for end-users to override the theme&rsquo;s presentation.</p>
@@ -977,9 +977,9 @@ $ vi themes/zafta/layouts/_default/single.html
 {{ partial &#34;footer.html&#34; . }}
 :wq
 
-</code></pre></div><p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page doesn&rsquo;t.</p>
+</code></pre></div><p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page sekercisn&rsquo;t.</p>
 <h3 id="dont-repeat-yourself">Don&rsquo;t Repeat Yourself</h3>
-<p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
+<p>DRY is a good design goal and Hugo sekercis a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
 
       </div>
 
@@ -1102,7 +1102,7 @@ $ vi themes/zafta/layouts/_default/single.html
   <footer class="footer">
     <section class="container">
       
-        <p>Enter a text here.</p>
+        <p>Salih Selim Sekerci's About..</p>
       
       
         ©
@@ -1114,7 +1114,7 @@ $ vi themes/zafta/layouts/_default/single.html
       
       
          · 
-        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        Powered by <a>Salih Selim Sekerci</a>
       
       
         
